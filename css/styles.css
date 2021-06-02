@@ -8,6 +8,9 @@
   --background-another: #2f303a;
   --button-color: #f5f4fa;
   --header-border: #ececec;
+  --background-hero: rgba(47, 48, 58, 0.4);
+  --button-color-hover: #188ce8;
+  --backround-icons: #afb1b8;
 }
 /* * universal general selector */
 html {
@@ -64,6 +67,7 @@ img {
   margin-bottom: 50px;
   text-align: center;
 }
+
 /* Ховаємо непортібні заголовки */
 .hidden {
   font-size: 0px;
@@ -137,6 +141,12 @@ img {
 /* hero */
 .hero {
   background-color: var(--background-another);
+  background-image: linear-gradient(to top, var(--background-hero), var(--background-hero)),
+    url(../images/background/Img10opt.jpg);
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1600px;
   text-align: center;
   padding: 200px 0px;
 }
@@ -164,6 +174,10 @@ img {
   /* ??????? */
   cursor: pointer;
 }
+.hero-button:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background-color: var(--button-color-hover);
+}
 /*MAIN */
 
 /* main  Наши ценности */
@@ -175,6 +189,21 @@ img {
 .feature-list .item {
   width: 270px;
 }
+.feature-list .item::before {
+  content: '';
+  display: block;
+  height: 120px;
+  margin-bottom: 30px;
+  /* outline: 1px solid red; */
+  background-color: var(--button-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70px;
+}
+/* .feature-list .item:hover::before {
+  fill: greenyellow;
+  background-color: greenyellow;
+} */
 .feature-list .title {
   color: var(--title-text-color);
   text-transform: uppercase;
@@ -190,6 +219,18 @@ img {
   line-height: 1.714;
   letter-spacing: 0.03em;
 }
+.icon-antenna::before {
+  background-image: url(../images/icons/other-icons/antenna.svg);
+}
+.icon-clock::before {
+  background-image: url(../images/icons/other-icons/clock.svg);
+}
+.icon-diagram::before {
+  background-image: url(../images/icons/other-icons/diagram.svg);
+}
+.icon-astronaut::before {
+  background-image: url(../images/icons/other-icons/astronaut.svg);
+}
 /* Чем мы занимаемся */
 .hidden-padding-top {
   padding-top: 0;
@@ -202,7 +243,7 @@ img {
   display: flex;
   justify-content: space-between;
 }
-.team-list li {
+.team-list > li {
   background-color: var(--button-text-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -225,8 +266,36 @@ img {
   line-height: 1.187;
   letter-spacing: 0.03em;
   margin-top: 10px;
-
   text-align: center;
+}
+.team-social-icons {
+  display: flex;
+  margin-top: 16px;
+  justify-content: center;
+}
+.team-social-icons a {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.team-social-icons .item:not(:last-child) {
+  margin-right: 10px;
+}
+.team-social-icons .icons {
+  width: 20px;
+  height: 20px;
+  fill: var(--backround-icons);
+}
+.team-social-icons a:hover,
+.team-social-icons a:focus {
+  background-color: var(--accent-color);
+}
+.team-social-icons .icons:focus,
+.team-social-icons .icons:hover {
+  fill: var(--button-text-color);
 }
 /* FOOTER */
 /* adress */
