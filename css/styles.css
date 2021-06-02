@@ -280,6 +280,7 @@ img {
   border-radius: 50%;
   justify-content: center;
   align-items: center;
+  fill: var(--backround-icons);
 }
 .team-social-icons .item:not(:last-child) {
   margin-right: 10px;
@@ -287,15 +288,40 @@ img {
 .team-social-icons .icons {
   width: 20px;
   height: 20px;
-  fill: var(--backround-icons);
 }
 .team-social-icons a:hover,
 .team-social-icons a:focus {
   background-color: var(--accent-color);
-}
-.team-social-icons .icons:focus,
-.team-social-icons .icons:hover {
   fill: var(--button-text-color);
+}
+/* Постоянные клиенты */
+.customers-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.customers-list svg {
+  width: 106px;
+  height: 60px;
+}
+.customers-list > li:not(:last-child) {
+  margin-right: 30px;
+}
+.customers-list a {
+  display: flex;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--backround-icons);
+  box-sizing: border-box;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  fill: var(--backround-icons);
+}
+.customers-list a:hover,
+.customers-list a:focus {
+  fill: var(--accent-color);
+  border-color: var(--accent-color);
 }
 /* FOOTER */
 /* adress */
